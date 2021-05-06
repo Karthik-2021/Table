@@ -1,0 +1,68 @@
+<mvc:View controllerName="smartShift.Table.controller.View1" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" displayBlock="true"
+	xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="Dummy Application">
+					<content>
+						<Table id="idTable" growing="true" growingThreshold="5" width="100%" inset="true" class="ListTableCustomBorderClass"
+							items="{path:'/fruits'}" alternateRowColors="true" mode="SingleSelectMaster" selectionChange="onPress">
+							<headerToolbar>
+								<Toolbar>
+									<Title id="tableHeader2" text="Test Table"/>
+									<ToolbarSpacer/>
+								</Toolbar>
+							</headerToolbar>
+							<columns>
+								<Column hAlign="Center" styleClass="limit" width="13%">
+									<header>
+										<Label text="Name" tooltip="Column1" class="xsmallText"></Label>
+									</header>
+								</Column>
+								<Column hAlign="Center" styleClass="limit" width="6%">
+									<header>
+										<Label text="Benefit" tooltip="Column2" class="xsmallText"></Label>
+									</header>
+								</Column>
+								<Column hAlign="Center" styleClass="limit" width="11%">
+									<header>
+										<Label text="Type" tooltip="Column3" class="xsmallText"></Label>
+									</header>
+								</Column>
+								<Column hAlign="Center" styleClass="limit" width="11%">
+									<header>
+										<Label text="Avaliability" tooltip="Column4" class="xsmallText"></Label>
+									</header>
+								</Column>
+							</columns>
+							<items >
+								<ColumnListItem >
+									<cells>
+										<Text textAlign="Left" text="{name}" class="smallText"/>
+										<Text textAlign="Left" text="{benefit}" class="smallText"/>
+										<Text textAlign="Left" text="{type}" class="smallText"/>
+										<Text textAlign="Left" text="{availability}" class="smallText"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+						<Panel id="detailPanel" headerText="DetailPanel" class="sapUiResponsiveMargin" width="auto">
+							<f:SimpleForm id="idSimple" editable="true" layout="ResponsiveGridLayout" title="Fruits Form" labelSpanXL="3" labelSpanL="3" labelSpanM="3"
+								labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+								singleContainerFullSize="false">
+								<Label text="Name"></Label>
+								<Input id="idName"></Input>
+								<Label text="Benefit"></Label>
+								<Input id="idBenefit"></Input>
+								<Label text="Type"></Label>
+								<Input id="idType"></Input>
+								<Label text="Availability"></Label>
+								<Input id="idAvailability"></Input>
+							</f:SimpleForm>
+						</Panel>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
